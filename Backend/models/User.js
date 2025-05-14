@@ -18,10 +18,11 @@ const userSchema = new mongoose.Schema({
     }],
     active:{
         type: Boolean,
-        required: true
+        default: true
 
     }
   
 })
 
-module.exports = mongoose.model('User',userSchema)
+const User = mongoose.models.User || mongoose.model('User', userSchema)
+module.exports = User
