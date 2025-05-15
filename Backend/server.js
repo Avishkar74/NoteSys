@@ -23,6 +23,7 @@ app.use('/',express.static(path.join(__dirname, 'public'))) // for serving stati
 
 app.use('/' , require('./routes/root')) // root route
 app.use('/users', require('./routes/userRoutes'))
+app.use('/notes', require('./routes/noteRoutes'))
 
 
 app.use((err, req, res, next) => {  // error handler
